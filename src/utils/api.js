@@ -8,3 +8,4 @@ export const getCategories = async () => {
     const { data } = await gamesApi.get('/categories');
     return data.categories;
 }
+
