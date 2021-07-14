@@ -2,7 +2,7 @@ import { useEffect, useState  } from "react";
 import { getCategories } from '../utils/api'
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
+const Home = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
@@ -25,4 +25,4 @@ const Nav = () => {
     );
 };
 
-export default Nav;
+export default Home;

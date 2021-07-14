@@ -9,3 +9,13 @@ export const getCategories = async () => {
     return data.categories;
 }
 
+export const getReviews = async () => {
+    const { data } = await gamesApi.get('/reviews');
+    return data.reviews;
+}
+
+export const getReviewsById = async (review_id) => {
+    const { data } = await gamesApi.get(`/reviews/${review_id}`);
+    return data.review;
+}
+
