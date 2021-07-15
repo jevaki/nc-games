@@ -2,3 +2,6 @@
   text-align: center;
 }
 
+.Nav {
+  display: flex;
+}

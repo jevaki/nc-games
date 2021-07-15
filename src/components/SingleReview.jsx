@@ -17,16 +17,13 @@ const Reviews = () => {
     }, [review_id]);
     console.log(review);
     return (
+        <div>
         <p>{review.review_body}</p>
-    //     <ul>
-    //        {reviewsById.map((reviewById) => {
-    //            return(
-    //                <ul key={reviewById.review_id}>
-    //                <p>{reviewById.review_body}</p>
-    //                </ul>
-    //            )
-    //        })}
-    //   </ul>
+        <p>{review.designer}</p>
+        <img src={review.review_img_url} alt=""></img>
+        <p>Created at: {review.created_at}</p>
+        <p>Votes: {review.votes}</p>
+        </div>
     );
 };
 

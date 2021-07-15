@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import Categories from './components/Categories';
-import Reviews from './components/Reviews';
+import SingleReview from './components/SingleReview';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Categories />
         </Route>
         <Route exact path="/reviews/:review_id">
-          <Reviews />
+          <SingleReview />
         </Route>
         <Route>
           <p>404 not found</p>

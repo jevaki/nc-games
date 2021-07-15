@@ -34,7 +34,7 @@ const Category = () => {
             );
           })}
         </ul>
-        <h2>Games</h2>
+        <h2>Reviews</h2>
         <ul>
           {reviews.map((review) => {
             return (
