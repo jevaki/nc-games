@@ -5,3 +5,6 @@
 .Nav {
   display: flex;
 }
+.review_img {
+  width: 200px;
+}
