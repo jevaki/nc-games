@@ -1,6 +1,7 @@
 import { useEffect, useState  } from "react";
 import { getCategories, getReviews } from '../utils/api'
 import { Link } from 'react-router-dom';
+import Expandable from "./Expandable";
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
@@ -19,7 +20,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div>
+        <section>
         <nav className="Nav">
            {categories.map((category) => {
                return (
@@ -31,8 +32,8 @@ const Home = () => {
                )
            })}
         </nav>
-        <button>All games reviews</button>
         <ul>
+            <Expandable name="All games reviews">
             {reviews.map((review) => {
                 return (
                     <li key={review.review_id}>
@@ -42,9 +43,9 @@ const Home = () => {
                     </li>
                 )
             })}
+            </Expandable>
         </ul>
-        </div>
-       
+        </section>
     );
 };
 
