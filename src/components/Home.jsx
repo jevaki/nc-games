@@ -34,6 +34,7 @@ const Home = () => {
         </nav>
         <ul>
             <Expandable name="All games reviews">
+                <button className="shorted_by_button">shorted by</button>
             {reviews.map((review) => {
                 return (
                     <li key={review.review_id}>

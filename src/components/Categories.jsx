@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getCategories, getReviews } from '../utils/api'
 import { Link } from "react-router-dom";
+import Expandable from "./Expandable";
 
 
 const Category = () => {
@@ -34,8 +35,8 @@ const Category = () => {
             );
           })}
         </ul>
-        <h2>Reviews</h2>
         <ul>
+          <Expandable name="Reviews">
           {reviews.map((review) => {
             return (
                 <li key={review.review_id}>
@@ -45,6 +46,7 @@ const Category = () => {
                 </li>
             );
           })}
+          </Expandable>
         </ul>
        
       </main>

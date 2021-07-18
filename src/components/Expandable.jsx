@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 const Expandable = ({children,name}) => {
-    console.log(children);
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleOpen = () => setIsOpen((currOpen) => !currOpen);
