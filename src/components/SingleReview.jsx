@@ -11,7 +11,7 @@ import Expandable from "./Expandable";
 const SingleReview = () => {
   const [review, setReview] = useState([]);
   const [comments, setComments] = useState([]);
-  const [totalVotes, setVotes] = useState(0);
+  const [votes, setVotes] = useState(0);
   const { review_id } = useParams();
 
   useEffect(() => {
@@ -30,10 +30,14 @@ const SingleReview = () => {
     getComments(review_id).then((commentsFromApi) => {
       setComments(commentsFromApi);
     });
-  }, [review_id, review]);
+  }, [review_id]);
 
   const incrementAndUpdateVotes = () => {
-    updateVotes(review_id);
+    updateVotes(review_id, 1).then(() => {
+      setVotes((currSetVotes) => {
+        return currSetVotes + 1;
+      })
+    })
   };
 
   return (
@@ -43,7 +47,7 @@ const SingleReview = () => {
         <p>{review.review_body}</p>
         <p>{review.designer}</p>
         <p>Created at: {review.created_at}</p>
-        <p>Votes: {totalVotes}</p>
+        <p>Votes: {votes}</p>
         <button onClick={() => incrementAndUpdateVotes()}>🗳️</button>
       </ul>
       <ul>
