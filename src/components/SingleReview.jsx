@@ -8,7 +8,7 @@ import {
 } from "../utils/api";
 import Expandable from "./Expandable";
 
-const Reviews = () => {
+const SingleReview = () => {
   const [review, setReview] = useState([]);
   const [comments, setComments] = useState([]);
   const [totalVotes, setVotes] = useState(0);
@@ -61,4 +61,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default SingleReview;
